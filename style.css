@@ -1,9 +1,68 @@
+/* 基礎設定 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    text-align: center;
+    font-family: "Microsoft JhengHei", sans-serif; /* 設定字體為微軟正黑體 */
+    margin: 0; /* 讓網頁邊框不留白 */
+    background-color: #a8a8a8; /* 整個背景用淺灰色，比較不刺眼 */
+    color: #000000;
 }
 
-h1 {
-    color: #333;
+/* 導航欄樣式 */
+.navbar {
+    background-color: #696969; /* 深藍色背景，很有官方、權威的感覺 */
+    color: white;
+    padding: 1rem 0;
+    position: sticky; /* 【重點】捲動頁面時，選單會一直黏在頂部不動 */
+    top: 0;
+    z-index: 1000; /* 確保選單永遠在最上面，不會被其他東西擋住 */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1900px; /* 最大1900 */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+.nav-item {
+    color: #000000;
+    text-decoration: none;
+    padding: 20px 10px;
+    transition: 0.5s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/* 內容切換樣式 */
+.page-content {
+    display: none;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.page-content.active {
+    display: block;
+}
+
+/* 大橫幅樣式 */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1000x300');
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 20px;
 }
