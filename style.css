@@ -8,13 +8,15 @@ body {
 
 /* 導航欄樣式 */
 .navbar {
-    background-color: #696969; /* 深藍色背景，很有官方、權威的感覺 */
-    color: white;
+    background-color: #fff400; /* 深藍色背景，很有官方、權威的感覺 */
+    color: #696969;
     padding: 1rem 0;
     position: sticky; /* 【重點】捲動頁面時，選單會一直黏在頂部不動 */
     top: 0;
     z-index: 1000; /* 確保選單永遠在最上面，不會被其他東西擋住 */
 }
+
+/* 導航欄樣式 */
 
 .nav-container {
     display: flex;
@@ -39,7 +41,7 @@ body {
 }
 
 .nav-item:hover, .nav-item.active {
-    background-color: #ffffff;
+    background-color: #a5a5a5;
     border-radius: 10px;
 }
 
@@ -59,10 +61,10 @@ body {
 
 /* 大橫幅樣式 */
 .hero-banner {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1000x300');
+    background: linear-gradient(rgba(163, 37, 37, 0.5), rgba(0,0,0,0.5)), url('htps://via.placeholder.com/1000x300');
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 60px 20px;
-    margin-bottom: 20px;
+    padding: 100px 100px;
+    margin-bottom: 10px;
 }

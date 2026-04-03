@@ -8,14 +8,21 @@
 <body>
 
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">宅宅の家</div>
+    <div class="logo">
+        <a href="index.html">
+            <img src="image/2.png" alt="宅宅の家" height="100"; width="100">
+        </a> 
 
+    <div class="nav-container">
+        <div class="logo"><a href="index.html" class="" onclick="showPage('home')"></a>
+    </div>
+    
         
         <ul class="nav-links">
-            <li><a href="javascript:void(0)" class="nav-item active" onclick="showPage('home')">首頁</a></li>
-            <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('news')">最新消息</a></li>
-            <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('discord')">社群狀態</a></li>
+            <li><a href="index.html" class="nav-item active" onclick="showPage('home')">首頁</a></li>
+            <li><a href="law.html" class="nav-item" onclick="showPage('main')">規則</a></li>
+            <li><a href="main-member.html" class="nav-item" onclick="showPage('main')">主要成員</a></li>
+            <li><a href="" class="nav-item" onclick="showPage('discord')">社群狀態</a></li>
         </ul>
     </div>
 </nav>
@@ -23,24 +30,24 @@
 <main class="content-wrapper">
     <section id="home" class="page-content active">
         <div class="hero-banner">
-            <h1>歡迎來到宅宅の家</h1>
-            <h1>這是一個Discord群之網站，提供給喜歡玩遊戲的人。</h1>
+            <h1><strong>歡迎來到宅宅の家</strong></h1><h2><strong>這是一個Discord群之網站，提供給喜歡玩遊戲的人。</strong></h2>
         </div>
         <div class="info-card">
-            <h3>關於我們</h3>
-            <p>這是一個提供給喜歡玩遊戲的人的 Discord 社群網站。</p>
+            <h3><strong>關於我們</strong></h3>
+            <p>這是一個提供給喜歡玩遊戲的人的Discord社群網站。</p>
         </div>
     </section>
 
-    <section id="news" class="page-content">
-        <h2>最新消息</h2>
+
+    <section id="main" class="page-content">
+        <h2>主要成員</h2>
         <ul class="news-list">
             <li><span>2024/03/27</span> 伺服器規則更新</li>
             <li><span>2024/03/20</span> 本週遊戲活動：英雄聯盟大賽</li>
         </ul>
     </section>
 
-    <section id="discord" class="page-content">
+    <section id="home" class="home">
         <h2>Discord 社群狀態</h2>
         <div class="dc-card">
             <p>目前在線人數：<span id="online-count">讀取中...</span></p>
