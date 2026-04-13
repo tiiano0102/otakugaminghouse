@@ -7,6 +7,24 @@
 </head>
 <body>
 
+<ul class="nav-links">
+    <li><a href="javascript:void(0)" class="nav-item active" onclick="showPage('home')">首頁</a></li>
+    <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('rules')">規則</a></li>
+    <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('members')">主要成員</a></li>
+</ul>
+
+<div id="home" class="page-content">
+    <h1>歡迎來到首頁</h1>
+</div>
+
+<div id="rules" class="page-content" style="display:none;">
+    <h1>這是規則頁面</h1>
+</div>
+
+<div id="members" class="page-content" style="display:none;">
+    <h1>主要成員名單</h1>
+</div>
+
 <nav class="navbar">
     <div class="logo">
         <a href="index.html">
@@ -18,7 +36,7 @@
     </div>
     
         <ul class="nav-links">
-            <li><a href="index.html" class="nav-item active" onclick="showPage('home')">首頁</a></li>
+            <li><a href="index.html" class="nav-item" onclick="showPage('home')">首頁</a></li>
             <li><a href="law.html" class="nav-item" onclick="showPage('main')">規則</a></li>
             <li><a href="main-member.html" class="nav-item" onclick="showPage('main')">主要成員</a></li>
             <li><a href="" class="nav-item" onclick="showPage('discord')">社群狀態</a></li>
@@ -81,6 +99,6 @@
 </script>
 
 
-
+<script src="index.js"></script>
 </body>
 </html>
