@@ -8,28 +8,29 @@ body {
 
 /* 導航欄樣式 */
 .navbar {
-    background-color: #fff400; /* 深藍色背景，很有官方、權威的感覺 */
+    background-color: #dddddd; /* 深藍色背景，很有官方、權威的感覺 */
     color: #696969;
-    padding: 1rem 0;
+    padding: 1% ;
     position: sticky; /* 【重點】捲動頁面時，選單會一直黏在頂部不動 */
     top: 0;
-    z-index: 1000; /* 確保選單永遠在最上面，不會被其他東西擋住 */
+    z-index: 100; /* 確保選單永遠在最上面，不會被其他東西擋住 */
 }
 
 /* 導航欄樣式 */
 
 .nav-container {
     display: flex;
-    justify-content: space-between; 
-    align-items: center;
+    justify-content: end; 
+    align-items: start;
     max-width: 1900px; /* 最大1900 */
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0;
+    padding: 5 20px;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: start;
     margin: 0;
 }
 

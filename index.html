@@ -7,34 +7,15 @@
 </head>
 <body>
 
-<ul class="nav-links">
-    <li><a href="javascript:void(0)" class="nav-item active" onclick="showPage('home')">首頁</a></li>
-    <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('rules')">規則</a></li>
-    <li><a href="javascript:void(0)" class="nav-item" onclick="showPage('members')">主要成員</a></li>
-</ul>
-
-<div id="home" class="page-content">
-    <h1>歡迎來到首頁</h1>
-</div>
-
-<div id="rules" class="page-content" style="display:none;">
-    <h1>這是規則頁面</h1>
-</div>
-
-<div id="members" class="page-content" style="display:none;">
-    <h1>主要成員名單</h1>
-</div>
-
 <nav class="navbar">
     <div class="logo">
         <a href="index.html">
-            <img src=image/1.jpg alt="宅宅の家" height="100" width="100">
+            <img src="image/1.jpg" alt="宅宅の家" height="150" width="150">
         </a> 
 
     <div class="nav-container">
         <div class="logo"><a href="index.html" class="" onclick="showPage('home')"></a>
-    </div>
-    
+ 
         <ul class="nav-links">
             <li><a href="index.html" class="nav-item" onclick="showPage('home')">首頁</a></li>
             <li><a href="law.html" class="nav-item" onclick="showPage('main')">規則</a></li>
@@ -54,7 +35,6 @@
             <p>這是一個提供給喜歡玩遊戲的人的Discord社群網站。</p>
         </div>
     </section>
-
 
     <section id="main" class="page-content">
         <h2>主要成員</h2>
@@ -98,7 +78,7 @@
     setInterval(getOnlineCount, 30000); // 每 30 秒更新一次
 </script>
 
-
 <script src="index.js"></script>
+
 </body>
 </html>
