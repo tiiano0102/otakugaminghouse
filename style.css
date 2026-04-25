@@ -20,6 +20,7 @@ body {
 
 .nav-container {
     display: flex;
+    flex-direction: row;
     justify-content: end; 
     align-items: start;
     max-width: 1900px; /* 最大1900 */
@@ -86,4 +87,16 @@ body {
     text-align: center;
     padding: 100px 100px;
     margin-bottom: 10px;
+}
+
+.Form {
+  text-decoration: none;
+  padding: 50px 25px;
+  color: black;              /* 預設文字黑色 */
+  border-radius: 6px;        /* 稍微圓角 */
+  transition: background-color 0.3s, color 0.3s;
+  list-style: none;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
 }
