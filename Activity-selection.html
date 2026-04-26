@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動選擇</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html">
+            <img src="1.jpg" alt="宅宅の家" height="100" width="100">
+        </a> 
+
+    <div class="nav-container">
+        <div class="logo"><a href="index.html" class="" onclick="showPage('home')"></a>
+ 
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item" onclick="showPage('home')">首頁</a></li>
+            <li><a href="law.html" class="nav-item" onclick="showPage('law')">規則</a></li>
+            <li><a href="main-member.html" class="nav-item" onclick="showPage('main')">主要成員</a></li>
+            <li><a href="Form.html" class="nav-item" onclick="showPage('Form')">表單</a></li>
+        </ul>
+    </div>
+</nav>
+
+<p class="title">活動選擇</p>
+
+<form name="name">
+    <div class="name">
+        <p class="title">一、DC名字</p>
+            <p class="text">
+                <input type="text" name="DC名字" id="">
+            </p>
+    </div>
+
+    <div class="activity">
+        <p class="title">二、活動</p>
+        <p class="subtitle1">1.</p>
+        <p class="subtitle2">
+            (1)主題一<span class="required">*</span>
+        </p>
+            <p class="text2">
+                <input type="text" name="主題一" id="" required>
+            </p>
+        <p class="subtitle2">
+            (2)活動內容<span class="required">*</span>
+        </p>
+            <p class="text2">
+                <input type="text" name="活動內容" id="" required>
+            </p>
+        <p class="subtitle2">
+            (3)活動開始時間<span class="required">*</span>
+        </p>
+            <p class="date">
+                <input type="date" id="start_date" required>
+            </p>
+        <p class="subtitle2">
+            (4)活動結束時間<span class="required">*</span>
+        </p>
+            <p class="date">
+                <input type="date" id="end_date" required>
+            </p>
+    </div>
+
+    <div class="activity">
+        <p class="subtitle1">2.</p>
+        <p class="subtitle2">(1)主題二</p>
+            <p class="text2">
+                <input type="text" name="主題二" id="">
+            </p>
+        <p class="subtitle2">(2)活動內容</p>
+            <p class="text2">
+                <input type="text" name="活動內容" id="">
+            </p>
+        <p class="subtitle2">
+            (3)活動開始時間
+        </p>
+            <p class="date">
+                <input type="date" id="start_date">
+            </p>
+        <p class="subtitle2">
+            (4)活動結束時間
+        </p>
+            <p class="date">
+                <input type="date" id="end_date">
+            </p>
+    </div>
+
+    <div class="activity">
+        <p class="subtitle1">3.</p>
+        <p class="subtitle2">(1)主題三</p>
+            <p class="text2">
+                <input type="text" name="主題三" id="">
+            </p>
+        <p class="subtitle2">(2)活動內容</p>
+            <p class="text2">
+                <input type="text" name="活動內容" id="">
+            </p>
+        <p class="subtitle2">
+            (3)活動開始時間
+        </p>
+            <p class="date">
+                <input type="date" id="start_date" >
+            </p>
+        <p class="subtitle2">
+            (4)活動結束時間
+        </p>
+            <p class="date">
+                <input type="date" id="end_date">
+            </p>
+    </div>
+
+    <p class="submit"><input type="submit" value="提交"></p>
+
+</form>
+
+</body>
+</html>

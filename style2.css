@@ -62,8 +62,103 @@ body {
     display: inline-block;
     align-items: flex-start;
     margin: 0;
-    /* flex設定 */
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+
 }
+
+.text input{
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 100px;
+    width: 1500px;
+    height: 25px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;      /* 跟標題保持距離 */
+    border:  solid #ccc;
+    border-radius: 10px;   /* 圓角 */
+}
+
+.text2 input{
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 150px;
+    width: 1500px;
+    height: 25px;
+    font-size: 20px;
+    padding: 5px 10px;
+    margin-top: 10px;      /* 跟標題保持距離 */
+    border:  solid #ccc;
+    border-radius: 10px;   /* 圓角 */
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px 100px;
+}
+
+.subtitle1 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px 125px;
+}
+
+.subtitle2 {
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 25px 150px;
+}
+
+input[type="date"] {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px 150px;
+    font-size: 20px;
+    margin-top: 10px;  
+    width: 250px;         /* 寬度加長 */
+    height: 45px;         /* 高度增加 */
+    font-size: 20px;      /* 字體變大，讓「年/月/日」更好讀 */
+    padding: 5px 10px;    /* 內距，讓內容不擠壓 */
+    border: 2px solid #555; /* 邊框加深 */
+    border-radius: 8px;   /* 增加圓角感 */
+    cursor: pointer;      /* 滑鼠移上去變手指圖示 */
+}
+
+/* 針對裡面的日期圖示（小月曆）稍微調整 */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.required {
+    color: red;
+}
+
+/* 針對提交按鈕 */
+input[type="submit"], .submit-btn {
+    margin: 0px 150px;
+    width: 200px;                /* 寬度加長 */
+    height: 50px;                /* 高度增加 */
+    font-size: 20px;             /* 字體變大 */
+    font-weight: bold;           /* 字體加粗 */
+    color: rgb(0, 0, 0);       /* 文字顏色 */
+    background-color: #ccc;    /* 背景顏色 */
+    border: none;                /* 去掉預設邊框 */
+    border-radius: 10px;         /* 圓角：讓按鈕看起來更現代 */
+    cursor: pointer;             /* 滑鼠移上去變手指 */
+    transition: 0.3s;            /* 動畫過渡：變色時更平滑 */
+    margin-top: 30px;            /* 與上方欄位保持距離 */
+}
+
+/* 滑鼠移上去（Hover）的效果 */
+input[type="submit"]:hover, .submit-btn:hover {
+    background-color: #45a049;   /* 變深一點的綠色 */
+    transform: scale(1.05);      /* 輕微放大效果 */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 加上一點陰影 */
+} 
