@@ -6,7 +6,7 @@ body {
     color: #000000;
 }
 
-/* 導航欄樣式 */
+/* 導覽列容器 */
 .navbar {
     background-color: #dddddd; /* 深藍色背景，很有官方、權威的感覺 */
     color: #696969;
@@ -14,32 +14,43 @@ body {
     position: sticky; /* 【重點】捲動頁面時，選單會一直黏在頂部不動 */
     top: 0;
     z-index: 100; /* 確保選單永遠在最上面，不會被其他東西擋住 */
+    font-size: 20px;
+    font-weight: bolder
 }
-
-/* 導航欄樣式 */
 
 .nav-container {
     display: flex;
     flex-direction: row;
-    justify-content: end; 
-    align-items: start;
-    max-width: 1900px; /* 最大1900 */
+    justify-content: space-between; /* 圖片最左，選單最右 */
+    align-items: center;
+    max-width: 1800px; /* 最大1900 */
     margin: 0;
-    padding: 5 20px;
+    padding: 5px 20px;
 }
 
+/* 選單列表 */
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: start;
-    margin: 0;
+  display: flex;
+  list-style: none;
+  margin: 0;
 }
 
+/* 關鍵：下拉選單的父層必須是相對定位 */
+.has-dropdown {
+  position: relative; 
+}
+
+/* 預設的導覽項目樣式 */
 .nav-item {
     color: #000000;
     text-decoration: none;
     padding: 20px 10px;
     transition: 0.5s;
+    color: black;          /* 預設文字黑色 */
+    padding: 8px 16px;     /* 讓背景有厚度 */
+    border-radius: 6px;    /* 稍微圓角 */
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
 }
 
 .nav-item:hover, .nav-item.active {
@@ -49,21 +60,43 @@ body {
 
 /* 內容切換樣式 */
 
-/* 預設的導覽項目樣式 */
-.nav-item {
-    text-decoration: none;
-    color: black;          /* 預設文字黑色 */
-    padding: 8px 16px;     /* 讓背景有厚度 */
-    border-radius: 6px;    /* 稍微圓角 */
-    transition: background-color 0.3s, color 0.3s;
-    display: inline-block;
-}
 
 /* 這是你要的「亮起來」格式 (完全對應圖片) */
 .nav-item.active {
     background-color: #8c8c8c; /* 灰黑色背景 */
     color: #ffffff !important;  /* 強制文字變白色 */
     cursor: default;           /* 點亮後滑鼠游標變回一般狀態 */
+}
+
+/* --- 下拉選單主體 --- */
+.dropdown {
+  display: none;          /* 預設隱藏 */
+  position: absolute;     /* 絕對定位 */
+  top: 100%;              /* 接在父層下方 */
+  left: 0;
+  background-color: #afafaf; 
+  list-style: none;
+  padding: 0;
+  min-width: 150px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 滑鼠移入時顯示 */
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* 下拉選單內的文字樣式 */
+.dropdown li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown li a:hover {
+  background-color: #8a8a8a; 
 }
 
 .page-content {
@@ -90,13 +123,15 @@ body {
 }
 
 .Form {
-  text-decoration: none;
-  padding: 50px 25px;
-  color: black;              /* 預設文字黑色 */
-  border-radius: 6px;        /* 稍微圓角 */
-  transition: background-color 0.3s, color 0.3s;
-  list-style: none;
-  display: flex;
-  align-items: flex-start;
-  margin: 0;
+    text-decoration: none;
+    padding: 50px 25px;
+    color: black;              /* 預設文字黑色 */
+    border-radius: 6px;        /* 稍微圓角 */
+    transition: background-color 0.3s, color 0.3s;
+    list-style: none;
+    display: inline-block;
+    align-items: flex-start;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
 }

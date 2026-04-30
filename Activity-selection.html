@@ -8,23 +8,37 @@
 </head>
 <body>
 <nav class="navbar">
+  <div class="nav-container">
+    <!-- 左側 Logo 區 -->
     <div class="logo">
-        <a href="index.html">
-            <img src="1.jpg" alt="宅宅の家" height="100" width="100">
-        </a> 
-
-    <div class="nav-container">
-        <div class="logo"><a href="index.html" class="" onclick="showPage('home')"></a>
- 
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-item" onclick="showPage('home')">首頁</a></li>
-            <li><a href="law.html" class="nav-item" onclick="showPage('law')">規則</a></li>
-            <li><a href="main-member.html" class="nav-item" onclick="showPage('main')">主要成員</a></li>
-            <li><a href="Form.html" class="nav-item" onclick="showPage('Form')">表單</a></li>
-        </ul>
+      <a href="index.html" onclick="showPage('home')">
+        <img src="1.jpg" alt="宅宅之家" height="100" width="100" >
+      </a>
     </div>
-</nav>
 
+    <!-- 右側 選單區 -->
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-item" onclick="showPage('home')">首頁</a></li>
+      <li><a href="law.html" class="nav-item" onclick="showPage('law')">規則</a></li>
+      <li><a href="main-member.html" class="nav-item" onclick="showPage('main')">主要成員</a></li>
+
+      <!-- 含有下拉選單的項目 -->
+      <li class="has-dropdown">
+        <a href="Form.html" class="nav-item" onclick="showPage('Form')">表單</a>
+        
+        <!-- 子選單區塊 -->
+        <ul class="dropdown">
+          <li><a href="suggestion.html" target="_blank">建議</a></li>
+          <li><a href="Activity-selection.html" target="_blank">活動選擇</a></li>
+          <li><a href="Feedback.html" target="_blank">意見回饋</a></li>
+          <li><a href="report.html" target="_blank">檢舉</a></li>
+          <li><a href="Title-Change.html" target="_blank">職稱變更</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
 <p class="title">活動選擇</p>
 
 <form name="name">
