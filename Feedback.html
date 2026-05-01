@@ -28,11 +28,11 @@
         
         <!-- 子選單區塊 -->
         <ul class="dropdown">
-          <li><a href="suggestion.html" target="_blank">建議</a></li>
-          <li><a href="Activity-selection.html" target="_blank">活動選擇</a></li>
-          <li><a href="Feedback.html" target="_blank">意見回饋</a></li>
-          <li><a href="report.html" target="_blank">檢舉</a></li>
-          <li><a href="Title-Change.html" target="_blank">職稱變更</a></li>
+          <li><a href="suggestion.html" target="_self">建議</a></li>
+          <li><a href="Activity-selection.html" target="_self">活動選擇</a></li>
+          <li><a href="Feedback.html" target="_self">意見回饋</a></li>
+          <li><a href="report.html" target="_self">檢舉</a></li>
+          <li><a href="Title-Change.html" target="_self">職稱變更</a></li>
         </ul>
       </li>
     </ul>
@@ -41,12 +41,107 @@
 
 <p class="title">意見回饋</p>
 
-<form name="建議">
-    <div class="suggestion">
-        <h2>建議一</h2>
-        <input type="text" name="suggestion1" id="">
-
+<form id="Feedback">
+    <div id="section-1" class="name">
+        <p class="title">一、DC名字<span class="required">*</span></p>
+            <p class="text">
+                <input type="text" id="DC名字" placeholder="請輸入名字" oninput="toggleSection2()" required>
+            </p>
     </div>
+
+    <div id="section-2"  class="Feedback hidden">
+        <p class="title">二、總體滿意度調查</p>
+        <p class="subtitle2">1、您對本群的整體滿意度為<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="滿意度" value="1" onclick="checkSection2Complete()" required>非常不滿意</label>
+            <label><input type="radio" name="滿意度" value="2" onclick="checkSection2Complete()">不滿意</label>
+            <label><input type="radio" name="滿意度" value="3" onclick="checkSection2Complete()">普通</label>
+            <label><input type="radio" name="滿意度" value="4" onclick="checkSection2Complete()">滿意</label>
+            <label><input type="radio" name="滿意度" value="5" onclick="checkSection2Complete()">非常滿意</label>
+          </p>
+    
+        <p class="subtitle2">2、您認為本群是否符合您的需求？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="符合度" value="1" required>非常不符合</label>
+            <label><input type="radio" name="符合度" value="2">不符合</label>
+            <label><input type="radio" name="符合度" value="3">普通</label>
+            <label><input type="radio" name="符合度" value="4">符合</label>
+            <label><input type="radio" name="符合度" value="5">非常符合</label>
+          </p>
+
+        <p class="subtitle2">3、您認為本群之規則陳述是否明確？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="明確度" value="1" required>是，非常明瞭</label>
+            <label><input type="radio" name="明確度" value="2">否，需再詳加說明</label>
+          </p>
+
+        <p class="subtitle3">3-2、是何處需要詳加說明？</p>
+          <p class="text4">
+            <input type="text" name="詳加說明" required>
+          </p>
+
+        <p class="subtitle2">4、 您覺得群內氣氛如何？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="良好度" value="1" required>非常不佳</label>
+            <label><input type="radio" name="良好度" value="2">不佳</label>
+            <label><input type="radio" name="良好度" value="3">普通</label>
+            <label><input type="radio" name="良好度" value="4">良好</label>
+            <label><input type="radio" name="良好度" value="5">非常良好</label>
+          </p>
+    </div>
+
+    <div class="Feedback">
+        <p class="title">三、頻道與活動滿意度調查</p>
+        <p class="subtitle2">1、頻道分類是否清楚、好找？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="分類" value="1" required>是</label>
+            <label><input type="radio" name="分類" value="2">否</label>
+          </p>
+    
+        <p class="subtitle2">2、您對群內活動（抽獎、語音聊天、比賽等）滿意嗎？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="活動滿意度" value="1" required>非常不滿意</label>
+            <label><input type="radio" name="活動滿意度" value="2">不滿意</label>
+            <label><input type="radio" name="活動滿意度" value="3">普通</label>
+            <label><input type="radio" name="活動滿意度" value="4">滿意</label>
+            <label><input type="radio" name="活動滿意度" value="5">非常滿意</label>
+          </p>
+
+        <p class="subtitle2">3、是否希望增加新的頻道或主題？<span class="required">*</span></p>
+          <p class="text3">
+            <label><input type="radio" name="希望度" value="1" required>是（請附加說明）</label>
+            <label><input type="radio" name="希望度" value="2">否</label>
+          </p>
+
+        <p class="subtitle3">3-2、希望增加之頻道 / 主題</p>
+          <p class="text4">
+            <input type="text" name="詳加說明" required>
+          </p>
+
+    <div class="Feedback">
+        <p class="title">四、建議與回饋</p>
+        <p class="subtitle2">1、您覺得本群最大的優點是？<span class="required">*</span></p>
+          <p class="text2">
+            <input type="text" name="優點" required>
+          </p>
+    
+        <p class="subtitle2">2、有哪些地方尚可以改進？<span class="required">*</span></p>
+          <p class="text2">
+            <input type="text" name="改進" required>
+          </p>
+
+        <p class="subtitle2">3、其他建議<span class="required">*</span></p>
+          <p class="text2">
+            <input type="text" name="其他建議" required>
+          </p>
+
+        <p class="subtitle2">4、想對管理員說的話<span class="required">*</span></p>
+          <p class="text2">
+            <input type="text" name="想對管理員說的話" required>
+          </p>
+    </div>
+    
+    <p class="submit"><input type="submit" value="提交"></p>
 
 </body>
 </html>

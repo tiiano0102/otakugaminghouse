@@ -28,11 +28,11 @@
         
         <!-- 子選單區塊 -->
         <ul class="dropdown">
-          <li><a href="suggestion.html" target="_blank">建議</a></li>
-          <li><a href="Activity-selection.html" target="_blank">活動選擇</a></li>
-          <li><a href="Feedback.html" target="_blank">意見回饋</a></li>
-          <li><a href="report.html" target="_blank">檢舉</a></li>
-          <li><a href="Title-Change.html" target="_blank">職稱變更</a></li>
+          <li><a href="suggestion.html" target="_self">建議</a></li>
+          <li><a href="Activity-selection.html" target="_self">活動選擇</a></li>
+          <li><a href="Feedback.html" target="_self">意見回饋</a></li>
+          <li><a href="report.html" target="_self">檢舉</a></li>
+          <li><a href="Title-Change.html" target="_self">職稱變更</a></li>
         </ul>
       </li>
     </ul>
@@ -62,14 +62,14 @@
         <h2>Discord 社群狀態</h2>
         <div class="dc-card">
             <p>目前在線人數：<span id="online-count">讀取中...</span></p>
-            <a href="https://discord.gg/kJM9V8hc4u" class="join-btn">點我加入 DC</a>
+            <a href="https://discord.gg/kJM9V8hC4u" class="join-btn">點我加入 DC</a>
         </div>
     </section>
 </main>
 
-<script>
+<script class="invite">
     // 使用你的邀請碼末端（例如：kJM9V8hc4u）
-    const inviteCode = "kJM9V8hc4u"; 
+    const inviteCode = "kJM9V8hC4u"; 
 
     async function getOnlineCount() {
         try {
@@ -81,10 +81,10 @@
             const online = data.approximate_presence_count;
             const total = data.approximate_member_count;
 
-            document.getElementById('online-count').innerText = `在線${online} 人（總共 ${total} 人）`;
+            document.getElementById('online-count').innerText = `在線：${online} 人（包含機器人：12人）總共：${total} 人 `;
         } catch (error) {
             console.error("抓取失敗", error);
-            document.getElementById('online-count').innerText = "暫時無法讀取";
+            document.getElementById('online-count').innerText = "暫時無法讀取，請聯繫管理員";
         }
     }
 

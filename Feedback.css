@@ -282,3 +282,41 @@ input[type="submit"]:hover, .submit-btn:hover {
     transform: scale(1.05);      /* 輕微放大效果 */
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* 加上一點陰影 */
 } 
+
+
+
+
+
+
+/* 預設隱藏樣式 */
+.hidden {
+  display: none !important; /* 加上 !important 確保不會被其他樣式覆蓋 */
+}
+
+/* 題目區塊樣式 */
+.Feedback {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+/* 必填星號 */
+.required {
+  color: red;
+  margin-left: 5px;
+}
+
+/* 單選按鈕間距 */
+.radio-group label {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* 子問題縮進感 */
+.sub-question {
+  margin-left: 25px;
+  margin-top: 10px;
+  border-left: 3px solid #ccc;
+  padding-left: 15px;
+}
